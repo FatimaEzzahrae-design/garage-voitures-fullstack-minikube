@@ -16,7 +16,7 @@ L’application permet de :
 
 Le système repose sur une architecture moderne distribuée utilisant : React, Spring Boot, MariaDB, Docker & Kubernetes (Minikube)
 
-3. Objectifs du projet
+2. Objectifs du projet
    
 Les principaux objectifs sont :
 
@@ -32,7 +32,7 @@ Les principaux objectifs sont :
 
 • Implémenter un module de recommandation intelligent basé sur des règles métier 
 
-5. Module d’Intelligence (IA métier)
+3. Module d’Intelligence (IA métier)
    
 Le système de recommandation ne repose pas sur une bibliothèque d’IA externe, mais sur une logique métier avancée de scoring.
 
@@ -67,7 +67,7 @@ Une liste de véhicules triés par pertinence.
   "score": 89.5
 }
 
-7. Architecture du système
+4. Architecture du système
    
 L’application suit une architecture en trois couches :
 
@@ -79,7 +79,7 @@ L’application suit une architecture en trois couches :
 
 • Base de données (MariaDB) 
 
-9. Architecture de déploiement (Kubernetes)
+5. Architecture de déploiement (Kubernetes)
     
 L’application est entièrement déployée sur Kubernetes (Minikube) :
 
@@ -91,7 +91,7 @@ L’application est entièrement déployée sur Kubernetes (Minikube) :
 
 • services exposés via NodePort 
 
-11. Instructions d’exécution du projet
+6. Instructions d’exécution du projet
     
 1. Cloner le projet
    
@@ -99,19 +99,19 @@ git clone https://github.com/FatimaEzzahrae-design/garage-voitures-fullstack-min
 
 cd garage-voitures-fullstack
 
-3. Lancer avec Kubernetes
+2. Lancer avec Kubernetes
    
 kubectl apply -f k8s/
 
-5. Vérifier les pods
+3. Vérifier les pods
    
 kubectl get pods
 
-7. Vérifier les services
+4. Vérifier les services
    
 kubectl get svc
 
-9. Accès à l’application
+5. Accès à l’application
     
 Composant               URL
 
@@ -121,7 +121,7 @@ API Backend               http://localhost:8081
 
 Recommandation IA         http://localhost:8081/api/ai/recommend?budget=100000&usage=ville
 
-11. Technologies utilisées
+7. Technologies utilisées
     
 Backend
 
@@ -153,7 +153,7 @@ DevOps
 
 • Nginx 
 
-13. Configuration de la base de données
+8. Configuration de la base de données
     
 spring.datasource.url=jdbc:mariadb://mariadb:3306/garage_db
 
