@@ -171,7 +171,7 @@ Exemple :
    
 - Interface utilisateur (React)
 
-http://<minikube-ip>:30080
+http://<MINIKUBE_IP>:30080
 
 Exemple :
 
