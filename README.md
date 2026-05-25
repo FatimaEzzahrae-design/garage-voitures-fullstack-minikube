@@ -179,11 +179,11 @@ http://192.168.49.2:30080
 
 - API Backend
   
-http://<minikube-ip>:8081
+http://<MINIKUBE_IP>:8081
 
 - Recommandation IA
   
-http://<minikube-ip>:8081/api/ai/recommend?budget=100000&usage=ville
+http://<MINIKUBE_IP>:8081/api/ai/recommend?budget=100000&usage=ville
 
 Exemple :
 
