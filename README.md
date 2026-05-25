@@ -114,11 +114,13 @@ kubectl get pods
    
 kubectl get svc
 
+minikube ip
+
 5. Accès à l’application
     
 Composant               URL
 
-Interface utilisateur     http://localhost:30080
+Interface utilisateur     http://<minikube-ip>:30080
 
 API Backend               http://localhost:8081
 
