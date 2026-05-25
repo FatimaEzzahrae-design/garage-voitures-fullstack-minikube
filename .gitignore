@@ -1,20 +1,15 @@
-# Node / React
+# Node
 node_modules/
 build/
 dist/
-
-# Spring Boot
-target/
-
-# Logs
-*.log
 
 # IDE
 .idea/
 .vscode/
 
+# Logs
+*.log
+
 # OS
 .DS_Store
-
-# Env files
-.env
+Thumbs.db
