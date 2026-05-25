@@ -95,7 +95,8 @@ L’application est entièrement déployée sur Kubernetes (Minikube) :
 
 6. Instructions d’exécution du projet
 
-    1. Cloner le projet
+
+1. Cloner le projet
    
 git clone https://github.com/FatimaEzzahrae-design/garage-voitures-fullstack-minikube.git
 
