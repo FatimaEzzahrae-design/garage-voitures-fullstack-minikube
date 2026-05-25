@@ -92,6 +92,7 @@ L’application est entièrement déployée sur Kubernetes (Minikube) :
 • services exposés via NodePort 
 
 6. Instructions d’exécution du projet
+
     
 1. Cloner le projet
    
