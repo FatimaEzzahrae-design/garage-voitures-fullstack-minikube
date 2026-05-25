@@ -1,5 +1,7 @@
 ﻿Système de Gestion de Garage Automobile avec Recommandation IA
 
+                                                                                          AFRAS Fatima-Ezzahrae
+
 1. Présentation du projet
 
 Ce projet est une application full-stack de gestion de voitures pour un garage automobile, intégrant un module de recommandation intelligente basé sur des règles métier (IA métier).
