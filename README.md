@@ -1,6 +1,6 @@
 ﻿Système de Gestion de Garage Automobile avec Recommandation IA
 
-                                                                                          AFRAS Fatima-Ezzahrae
+                                                                       AFRAS Fatima-Ezzahrae
 
 1. Présentation du projet
 
