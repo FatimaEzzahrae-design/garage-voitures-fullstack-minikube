@@ -36,7 +36,19 @@ Les principaux objectifs sont :
 
 3. Module d’Intelligence (IA métier)
    
-Le système de recommandation ne repose pas sur une bibliothèque d’IA externe, mais sur une logique métier avancée de scoring.
+Le module IA est une logique métier de scoring personnalisée.
+
+Il ne s'agit pas d'une IA basée sur machine learning, mais d’un système expert basé sur des règles :
+
+- budget utilisateur
+  
+- usage (ville / famille)
+  
+- prix véhicule
+  
+- critères métier
+
+Score final = pertinence du véhicule pour l’utilisateur
 
 • Entrées :
 
@@ -95,36 +107,87 @@ L’application est entièrement déployée sur Kubernetes (Minikube) :
 
 6. Instructions d’exécution du projet
 
-
 1. Cloner le projet
    
 git clone https://github.com/FatimaEzzahrae-design/garage-voitures-fullstack-minikube.git
 
-cd garage-voitures-fullstack
+cd garage-voitures-fullstack-minikube
 
-2. Lancer avec Kubernetes
-   
+2. Démarrer Minikube 
+
+minikube start
+
+Vérifier que Kubernetes fonctionne :
+
+kubectl cluster-info
+
+3. Construire et charger les images Docker dans Minikube
+
+IMPORTANT (sinon ErrImagePull)
+
+eval $(minikube docker-env)
+
+Puis construire les images :
+
+- Backend
+
+cd backend
+
+docker build -t backend-app:1.0 .
+
+cd ..
+
+- Frontend
+  
+cd frontend
+
+docker build -t react-app:1.2 .
+
+cd ..
+
+4. Déployer l’application sur Kubernetes
+
 kubectl apply -f k8s/
 
-3. Vérifier les pods
-   
+5. Vérifier que tout fonctionne
+
+- Pods
+
 kubectl get pods
 
-4. Vérifier les services
-   
+- Services
+  
 kubectl get svc
 
+6. Récupérer l’IP Minikube
+   
 minikube ip
 
-5. Accès à l’application
-    
-Composant               URL
+Exemple :
 
-Interface utilisateur     http://<minikube-ip>:30080
+192.168.49.2
 
-API Backend               http://localhost:8081
+7. Accès à l’application
+   
+- Interface utilisateur (React)
 
-Recommandation IA         http://localhost:8081/api/ai/recommend?budget=100000&usage=ville
+http://<minikube-ip>:30080
+
+Exemple :
+
+http://192.168.49.2:30080
+
+- API Backend
+  
+http://<minikube-ip>:8081
+
+- Recommandation IA
+  
+http://<minikube-ip>:8081/api/ai/recommend?budget=100000&usage=ville
+
+Exemple :
+
+http://192.168.49.2:8081/api/ai/recommend?budget=100000&usage=ville
 
 7. Technologies utilisées
     
